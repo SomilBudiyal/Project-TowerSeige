@@ -2,7 +2,7 @@ const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
 
-var engine, world;
+var engine,world;
 
 var slingshot;
 
@@ -17,6 +17,7 @@ var polygon;
 function setup() {
   createCanvas(800,800);
   stroke(255)
+
   engine = Engine.create();
   world = engine.world;
   
@@ -47,6 +48,7 @@ function setup() {
   box20 = new Base(500,300,150,20);
   
   polygon = new Polygon(100,200,50,50);
+  console.log(polygon);
   
 }
 
@@ -88,5 +90,5 @@ function mouseDragged(){
 }
 
 function mouseReleased(){
-  slingShot.fly();
+  slingshot.fly();
 }
