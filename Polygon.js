@@ -1,5 +1,6 @@
 class Polygon {
   constructor(x, y) {
+
    var options = {
    'restitution':0.8,
    'friction':1,
@@ -9,20 +10,17 @@ class Polygon {
     this.body = Bodies.rectangle(x, y, 50, 50, options);
     this.width = 50;
     this.height = 50;
+    this.image = loadImage("Picture/polygon.png");
     World.add(world, this.body);
  }
 
-   display(){
-    var pos =this.body.position;
-     pos.x = mouseX;
-     pos.y = mouseY;
-     var angle = this.body.angle;
-     push();
-      translate(pos.x, pos.y);
-      rotate(angle);
-      rectMode(CENTER);
-      fill("blue");
-      rect(0, 0, this.width, this.height);
-     pop();
+display(){
+  var angle = this.body.angle;
+    push();
+    translate(this.body.position.x, this.body.position.y);
+    rotate(angle);
+    imageMode(CENTER);
+    image(this.image, 0, 0, this.width, this.height);
+    pop();
  }
 } 
