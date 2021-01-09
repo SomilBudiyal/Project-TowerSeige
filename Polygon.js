@@ -2,6 +2,7 @@ class Polygon {
   constructor(x, y) {
 
    var options = {
+    isStatic : false,      
    'restitution':0.8,
    'friction':1,
     'density':1.0

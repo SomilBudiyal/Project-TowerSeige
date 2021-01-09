@@ -3,8 +3,8 @@ class SlingShot{
      var options = {
         bodyA: bodyA,
         pointB: pointB,
-        stiffness: 0.04,
-        length: 10
+        stiffness: 0.4,
+        length: 9
     }
 
     this.pointB = pointB
@@ -14,15 +14,17 @@ class SlingShot{
     }
 
     fly(){
-      this.sling.bodyA = null
+      this.sling.bodyA = null;
     }
 
 display(){
+
     if(this.sling.bodyA){
       var pointA = this.sling.bodyA.position;
       var pointB = this.pointB;
-      strokeWeight(4);
+      strokeWeight(7);
+      stroke("red");
       line(pointA.x, pointA.y, pointB.x, pointB.y);
   }
- }  
+ }
 }

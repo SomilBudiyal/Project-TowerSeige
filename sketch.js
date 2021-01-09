@@ -1,6 +1,7 @@
 const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
+const Constraint = Matter.Constraint;                 
 
 var engine,world;
 
@@ -11,8 +12,9 @@ var box11,box12,box13,box14,box15,box16,box17,box18,box19,box20;
 
 var base1,base2;
 
-var ground
 var polygon;
+
+var ground;
 
 function setup() {                                                                                                
   createCanvas(800,800);                                                                                                
@@ -35,7 +37,8 @@ function setup() {
   box7 = new Box(486,229,25,40);                                                                                                                                                                               
   box8 = new Box(500,190,25,40);                                                                                                                                                                               
   box9 = new Box(470,190,25,40);                                                                                                                                                                               
-  box10 = new Box(485,150,25,40);                                                                                                                                                                               
+  box10 = new Box(485,150,25,40);                              
+
   box11 = new Box(600,470,25,40);                                                                                                                                                                               
   box12 = new Box(570,470,25,40);                                                                                                                                                                                
   box13 = new Box(540,470,25,40);                                                                                                                                                                                
@@ -47,25 +50,35 @@ function setup() {
   box19 = new Box(595,390,25,40);                                                                                                                                                                               
   box20 = new Box(580,350,25,40);      
   
-  slingshot = new SlingShot(polygon.body,{x:281,y:724});
-                                                                                             
-  polygon = new Polygon(100,200,50,50);                                                                                                                                                                               
-                                                                                                                                          
+  polygon = new Polygon(146,400,50,50);                  
+
+  slingshot = new SlingShot(polygon.body,{x:150,y:400});                                                                                                                                       
 }                                                                                                
                                                                                           
 function draw() {                                                                                                                                                                               
   background("cyan");    
   
-  detectcollision(polygon,box1);
-  detectcollision(polygon,box2);
-  detectcollision(polygon,box3);
-  detectcollision(polygon,box4);
-  detectcollision(polygon,box5);
-  detectcollision(polygon,box6);
-  detectcollision(polygon,box7);
-  detectcollision(polygon,box8);
-  detectcollision(polygon,box9);
-  detectcollision(polygon,box10);
+  detectcollision(box1,polygon);
+  detectcollision(box2,polygon);
+  detectcollision(box3,polygon);
+  detectcollision(box4,polygon);
+  detectcollision(box5,polygon);
+  detectcollision(box6,polygon);
+  detectcollision(box7,polygon);
+  detectcollision(box8,polygon);
+  detectcollision(box9,polygon);
+  detectcollision(box10,polygon);
+
+  detectcollision(box11,polygon);
+  detectcollision(box12,polygon);
+  detectcollision(box13,polygon);
+  detectcollision(box14,polygon);
+  detectcollision(box15,polygon);
+  detectcollision(box16,polygon);
+  detectcollision(box17,polygon);
+  detectcollision(box18,polygon);
+  detectcollision(box19,polygon);
+  detectcollision(box20,polygon);  
                                                                                           
   ground.display();                                                                                                                                                                               
                                                                                           
@@ -84,8 +97,6 @@ function draw() {
   box10.display();  
   
   polygon.display();    
-
-  slingshot.display();
   
   box11.display();                                                                                                                                                                               
   box12.display();                                                                                                                                                                                
@@ -97,7 +108,8 @@ function draw() {
   box18.display();                                                                                                                                                                               
   box19.display();                                                                                                                                                                               
   box20.display();                                                                                                                                                                                                                                                                                                                                                 
-                          
+              
+  slingshot.display();
 }                                                                                                
      
 function detectcollision(lpolygon,lbox){
