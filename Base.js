@@ -1,7 +1,7 @@
 class Base {
 constructor(x,y,width,height) {
    var options = {
-    isStatic: true
+    isStatic: false
    }
 
     this.body = Bodies.rectangle(x,y,width,height,options);

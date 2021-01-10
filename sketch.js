@@ -16,6 +16,8 @@ var polygon;
 
 var ground;
 
+var gameState = "onSling";
+
 function setup() {                                                                                                
   createCanvas(800,800);                                                                                                
   stroke(255)                                                                                                
@@ -50,7 +52,7 @@ function setup() {
   box19 = new Box(595,390,25,40);                                                                                                                                                                               
   box20 = new Box(580,350,25,40);      
   
-  polygon = new Polygon(146,400,50,50);                  
+  polygon = new Polygon(150,400,10,10);                  
 
   slingshot = new SlingShot(polygon.body,{x:150,y:400});                                                                                                                                       
 }                                                                                                
@@ -122,11 +124,14 @@ function detectcollision(lpolygon,lbox){
   }
  }
 
-
-function mouseDragged(){                                                                                                 
+     
+function mouseDragged(){    
+  if(gameState!=="launched"){                                                                                       
   Matter.Body.setPosition(polygon.body,{x:mouseX,y:mouseY})
+ }      
 }
 
 function mouseReleased(){
   slingshot.fly();
+  gameState = "launched";
 }
