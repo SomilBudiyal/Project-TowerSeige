@@ -67,7 +67,7 @@ function draw() {
   //detectcollision(box5,polygon);
   //detectcollision(box6,polygon);
   //detectcollision(box7,polygon);
-  //detectcollision(box8,polygon);
+  //detectcollision(box8,polygon);      
   //detectcollision(box9,polygon);
 //  detectcollision(box10,polygon);
 
@@ -81,39 +81,39 @@ function draw() {
 //  detectcollision(box18,polygon);
  // detectcollision(box19,polygon);
  // detectcollision(box20,polygon);  
-                                                                                          
-  ground.display();                                                                                                                                                                               
-                                                                                          
-  base1.display();                                                                                                                                                                               
-  base2.display();     
-
-  box1.display();                                                                                                                                                                               
-  box2.display();                                                                                                                                                                               
-  box3.display();                                                                                                                                                                                
-  box4.display();                                                                                                                                                                               
-  box5.display();                                                                                                                                                                               
-  box6.display();                                                                                                                                                                               
-  box7.display();                                                                                                                                                                               
-  box8.display();                                                                                                                                                                               
-  box9.display();    
+                                     
+  ground.display();                                                                                                                                                                                    
+                                                                             
+  base1.display();                                                                                                                                                                                    
+  base2.display();            
+            
+  box1.display();   
+  box2.display();   
+  box3.display();                                                                                                                                                            
+  box4.display();                                                                                                                                                             
+  box5.display();                                                                                                                                                             
+  box6.display();                                                                                                                                                             
+  box7.display();                                                                                                                                                             
+  box8.display();                                                                                                                                                             
+  box9.display();   
   box10.display();  
-  
-  polygon.display();    
-  
-  box11.display();                                                                                                                                                                               
-  box12.display();                                                                                                                                                                                
-  box13.display();                                                                                                                                                                               
-  box14.display();                                                                                                                                                                               
-  box15.display();                                                                                                                                                                               
-  box16.display();                                                                                                                                                                               
-  box17.display();                                                                                                                                                                               
-  box18.display();                                                                                                                                                                               
-  box19.display();                                                                                                                                                                               
-  box20.display();                                                                                                                                                                                                                                                                                                                                                 
-              
-  slingshot.display();              
-}                                                                                                
-     
+            
+  polygon.display();
+            
+  box11.display();                                                                                                                                                             
+  box12.display();                                                                                                                                                              
+  box13.display();                                                                                                                                                             
+  box14.display();                                                                                                                                                             
+  box15.display();                                                                                                                                                             
+  box16.display();                                                                                                                                                             
+  box17.display();                                                                                                                                                             
+  box18.display();                                                                                                                                                             
+  box19.display();                                             
+  box20.display();                                                                                                                                                                                                                                                                                                                                                      
+                  
+  slingshot.display()                    
+} 
+
 //function detectcollision(lpolygon,lbox){
   //boxBodyPosition = lbox.body.position;
   //polygonBodyPosition = lpolygon.body.position;
@@ -126,12 +126,12 @@ function draw() {
 
      
 function mouseDragged(){    
-  if(gameState!=="launched"){                                                                                          
+  if(gameState!=="launch"){                                                                                          
   Matter.Body.setPosition(polygon.body,{x:mouseX,y:mouseY})
  }      
 }          
 
 function mouseReleased(){
   slingshot.fly();
-  gameState = "launched";
+  gameState = "launch";
 }
