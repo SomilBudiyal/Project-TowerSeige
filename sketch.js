@@ -61,26 +61,26 @@ function draw() {
   background("cyan");    
   
   //detectcollision(box1,polygon);
- // detectcollision(box2,polygon);
-//  detectcollision(box3,polygon);
- // detectcollision(box4,polygon);
+ //detectcollision(box2,polygon);
+  //detectcollision(box3,polygon);
+ //detectcollision(box4,polygon);
   //detectcollision(box5,polygon);
   //detectcollision(box6,polygon);
   //detectcollision(box7,polygon);
   //detectcollision(box8,polygon);      
   //detectcollision(box9,polygon);
-//  detectcollision(box10,polygon);
+//detectcollision(box10,polygon);
 
   //detectcollision(box11,polygon);
- // detectcollision(box12,polygon);
- // detectcollision(box13,polygon);
- /// detectcollision(box14,polygon);
- // detectcollision(box15,polygon);
- // detectcollision(box16,polygon);
- // detectcollision(box17,polygon);
-//  detectcollision(box18,polygon);
- // detectcollision(box19,polygon);
- // detectcollision(box20,polygon);  
+ //detectcollision(box12,polygon);
+ //detectcollision(box13,polygon);
+ //detectcollision(box14,polygon);
+ //detectcollision(box15,polygon);
+ //detectcollision(box16,polygon);
+ //detectcollision(box17,polygon);
+//detectcollision(box18,polygon);
+ //detectcollision(box19,polygon);
+ //detectcollision(box20,polygon);  
                                      
   ground.display();                                                                                                                                                                                    
                                                                              
@@ -120,7 +120,7 @@ function draw() {
 
  //var distance=dist(polygonBodyPosition.x, polygonBodyPosition.y, boxBodyPosition.x, boxBodyPosition.y);
  // if(distance<=lbox.diameter + lpolygon.diameter){
- //   Matter.Body.setStatic(lbox.body,false);
+ //Matter.Body.setStatic(lbox.body,false);
   //}
  //}
 
