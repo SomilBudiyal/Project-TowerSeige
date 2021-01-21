@@ -3,9 +3,9 @@ class Polygon {
 
    var options = {
     isStatic : false,      
-   'restitution':0.8,
-   'friction':1,
-    'density':1.0
+   'restitution':0,
+   'friction': 1,
+    'density': 0.1
     }
 
     this.body = Bodies.rectangle(x, y, 50, 50, options);

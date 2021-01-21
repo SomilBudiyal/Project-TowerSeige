@@ -102,15 +102,15 @@ function draw() {
             
   box11.display();                                                                                                                                                             
   box12.display();                                                                                                                                                              
-  box13.display();                                                                                                                                                             
+  box13.display();                                                                                                                                                                  
   box14.display();                                                                                                                                                             
-  box15.display();                                                                                                                                                             
-  box16.display();                                                                                                                                                             
+  box15.display();
+  box16.display();                                                                                                                                                                  
   box17.display();                                                                                                                                                             
   box18.display();                                                                                                                                                             
   box19.display();                                             
   box20.display();                                                                                                                                                                                                                                                                                                                                                      
-                  
+                     
   slingshot.display()                    
 } 
 
@@ -119,9 +119,9 @@ function draw() {
   //polygonBodyPosition = lpolygon.body.position;
 
  //var distance=dist(polygonBodyPosition.x, polygonBodyPosition.y, boxBodyPosition.x, boxBodyPosition.y);
- // if(distance<=lbox.diameter + lpolygon.diameter){
+  //if(distance<=lbox.diameter + lpolygon.diameter){
  //Matter.Body.setStatic(lbox.body,false);
-  //}
+ // }
  //}
 
      
