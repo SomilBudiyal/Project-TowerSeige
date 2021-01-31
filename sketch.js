@@ -12,11 +12,17 @@ var box11,box12,box13,box14,box15,box16,box17,box18,box19,box20;
 
 var base1,base2;
 
-var polygon;
+//var polygon;
+
+ var polyImage;
 
 var ground;
 
 var gameState = "onSling";
+
+function preload(){ 
+  polyImg=loadImage("Picture/polygon.png"); 
+}
 
 function setup() {                                                                                                
   createCanvas(800,800);                                                                                                
@@ -52,9 +58,12 @@ function setup() {
   box19 = new Box(595,390,25,40);                                                                                                                                                                               
   box20 = new Box(580,350,25,40);      
   
-  polygon = new Polygon(150,400,10,10);                  
+  //polygon = new Polygon(150,400,10,10);  
+  
+  polygon = Bodies.circle(150,400,50); 
+  World.add(world,polygon);
 
-  slingshot = new SlingShot(polygon.body,{x:150,y:400});                                                                                                                                       
+  slingshot = new SlingShot(this.polygon,{x:150,y:400});                                                                                                                                       
 }                                                                                                
                                                                                           
 function draw() {                                                                                                                                                                               
@@ -98,7 +107,8 @@ function draw() {
   box9.display();   
   box10.display();  
             
-  polygon.display();
+  imageMode(CENTER); 
+  image(polyImg,polygon.position.x,polygon.position.y,40,40);
             
   box11.display();                                                                                                                                                             
   box12.display();                                                                                                                                                              
@@ -111,7 +121,7 @@ function draw() {
   box19.display();                                             
   box20.display();                                                                                                                                                                                                                                                                                                                                                      
                      
-  slingshot.display()                    
+  slingshot.display();                    
 } 
 
 //function detectcollision(lpolygon,lbox){
@@ -127,7 +137,7 @@ function draw() {
      
 function mouseDragged(){    
   if(gameState!=="launch"){                                                                                          
-  Matter.Body.setPosition(polygon.body,{x:mouseX,y:mouseY})
+  Matter.Body.setPosition(this.polygon,{x:mouseX,y:mouseY})
  }      
 }          
 
